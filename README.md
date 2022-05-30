@@ -13,7 +13,7 @@ You can multi-select the models you like, choosing the file that you want to pro
 
 Then you will be direct to the result page:
 
-![2](/Users/zhengchenhao/Desktop/Intelligent-Backend/readme_image/2.png)
+![2](./readme_image/2.png)
 
 Each block represents the processed result of one model that you selected.  **Request The Backend Yourself** section tells you the API command if you want to request the backend directly. **Viewing Image** section gives you the processed result of your image. **Viewing Result** section presents the Json response message if you request the backend directly, which consists of three keys: **Latency, Result, and Download link**. The download link allows you to download the processed image directly.
 
