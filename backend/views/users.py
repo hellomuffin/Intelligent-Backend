@@ -14,12 +14,16 @@ outputs = []
 
 @backend.app.route('/', methods=['GET', 'POST'])
 def index():
+    global outputs
     """GET /users/<user_url_slug>."""
+    if flask.request.method == 'GET':
+        outputs = []
     if flask.request.method == 'POST':
         options = flask.request.form.getlist('models')
         file = flask.request.files['file']
         if file:
             if 'yolov5' in options:
+                print('here')
                 url = 'http://localhost:8000/api/v1/yolo/'
                 my_img = {'image': file.stream}
                 r = requests.post(url, files=my_img)
@@ -27,7 +31,8 @@ def index():
                 response['model_name'] = 'Yolov5'
                 response['url'] = url
                 outputs.append(response)
-            elif 'esrgan' in options:
+            if 'esrgan' in options:
+                print('here')
                 url = 'http://localhost:8000/api/v1/sr/'
                 my_img = {'image': file.stream}
                 r = requests.post(url, files=my_img)
@@ -35,8 +40,7 @@ def index():
                 response['model_name'] = 'Real-ESRGAN'
                 response['url'] = url
                 outputs.append(response)
-            else:
-                pass
+            print(outputs)
         return flask.redirect(flask.url_for('show_result'))
     return flask.render_template("index.html")
 

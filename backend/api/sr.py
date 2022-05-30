@@ -23,6 +23,7 @@ def sr():
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     process.wait()
     os.chdir('../../..')
+    print(os.getcwd())
     end = time.time()
     
     exe_time = end - start
@@ -34,9 +35,9 @@ def sr():
 
 
 @backend.app.route('/sr/download/')
-def download_file():
+def download_file1():
 	return flask.send_file('./api/sr/inputs/1.jpg', as_attachment=True)
 
 @backend.app.route('/sr/upload/')
-def upload_file():
+def upload_file1():
 	return flask.send_from_directory('./api/sr/outputs', '1.jpg')

@@ -11,7 +11,7 @@ WEBSITE: https://themefisher.com
 
   <!-- ** Basic Page Needs ** -->
   <meta charset="utf-8">
-  <title>Medic | Medical HTML Template</title>
+  <title>Intelligent-Backend/Result</title>
 
   <!-- ** Mobile Specific Metas ** -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,7 +59,7 @@ WEBSITE: https://themefisher.com
     <div class="row align-items-center">
       <div class="col-xl-4 col-lg-3">
         <div class="logo">
-          <a href="index.html">
+          <a href="/">
             <!-- <img loading="lazy" class="img-fluid" src="/static/images/logo.png" alt="logo"> -->
             <h1>Intelligent Backend</h1>
           </a>
@@ -127,12 +127,12 @@ WEBSITE: https://themefisher.com
 <section class="cta">
   <div class="container">
     <div class="cta-block row no-gutters">
-      <div class="col-lg-3 col-md-6 emmergency item">
-        <i class="fa fa-phone"></i>
+      <div class="col-lg-3 col-md-6 working-time item">
+        <i class="ffa fa-hourglass-o"></i>
         <h2>{{output.model_name}}</h2>
       </div>
-      <div class="col-lg-3 col-md-6 top-doctor item">
-        <i class="fa fa-stethoscope"></i>
+      <div class="col-lg-3 col-md-6 working-time item">
+        <i class="fa fa-hourglass-o"></i>
         <h2>Request the Backend Yourself</h2>
         <p>http --form POST {{output.url}} image=@{your_image_name}</p>
       </div>
@@ -141,13 +141,13 @@ WEBSITE: https://themefisher.com
         <h2>Viewing Image</h2>
         <img src="{{output.upload_file_link}}" alt="Paris" width="400" height="300">
       </div>
-      <div class="col-lg-3 col-md-12 working-time item">
+      <div class="col-lg-3 col-md-12 top-doctor item">
         <i class="fa fa-hourglass-o"></i>
         <h2>Viewing Result</h2>
-        <ul class="w-hours">
-          <li>Latency <span> {{output.latency}}</span></li>
-          <li>Result <span> {{output.result}}</span></li>
-          <li>Download Link <span>{{output.download_file_link}}</span></li>
+        <ul>
+          <p>Latency:  {{output.latency}}</p>
+          <p>Result:  {{output.result}}</p>
+          <p>Download Link <span>{{output.download_file_link}}</span></p>
         </ul>
       </div>
     </div>
