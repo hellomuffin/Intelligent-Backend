@@ -3,7 +3,7 @@
 This is a backend that integrate several AI models, aiming at enableing developers to quickly get AI-processsed result by simply calling the backend API command. A website is developed to visually demonstrate the functionality and how to use it.
 
 ## How to use it
-#### From Website
+### From Website
 
 The initial interface is as belows:
 
@@ -19,7 +19,7 @@ Each block represents the processed result of one model that you selected.  **Re
 
 **Considering the big running cost of big language models and video models, we haven't enable text and video file submit. But we will definitely do it when we make our backend more scalable.**
 
-#### From command line API request
+### From command line API request
 
 1. **First, make sure you have [HTTPie](https://httpie.org/) installed.**
 
