@@ -5,13 +5,6 @@ import os
 from backend.api.yolov5.detect import run
 from pathlib import Path
 
-# @backend.app.route('/api/v1/comments/', methods=['POST'])
-# def create_comment():
-#     """POST /api/v1/comments/?postid=<postid>."""
-#     context = {}
-#     context['lognameOwnsThis'] = True
-
-#     return flask.jsonify(**context), 201
 
 download_file_path = ''
 filename = '1.jpg'

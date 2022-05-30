@@ -7,7 +7,6 @@ URLs include:
 
 
 import flask
-from werkzeug.exceptions import abort
 import backend
 import requests
 
@@ -21,8 +20,7 @@ def index():
         file = flask.request.files['file']
         if file:
             if 'yolov5' in options:
-                url = 'http://35.2.82.78:8000//api/v1/yolo/'
-                print("here")
+                url = 'http://localhost:8000/api/v1/yolo/'
                 my_img = {'image': file.stream}
                 r = requests.post(url, files=my_img)
                 response = r.json()
@@ -30,7 +28,13 @@ def index():
                 response['url'] = url
                 outputs.append(response)
             elif 'esrgan' in options:
-                pass
+                url = 'http://localhost:8000/api/v1/sr/'
+                my_img = {'image': file.stream}
+                r = requests.post(url, files=my_img)
+                response = r.json()
+                response['model_name'] = 'Real-ESRGAN'
+                response['url'] = url
+                outputs.append(response)
             else:
                 pass
         return flask.redirect(flask.url_for('show_result'))

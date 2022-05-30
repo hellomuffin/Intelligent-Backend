@@ -10,6 +10,7 @@ setup(
         'bs4',
         'Flask',
         'requests',
+        'pathlib'
     ],
     python_requires='>=3.6',
 )

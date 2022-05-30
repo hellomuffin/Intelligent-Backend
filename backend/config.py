@@ -9,4 +9,4 @@ SECRET_KEY = b'3u\xca\x16OD\xcd>I\xc8\xc7\xed\x8a\xb9<\x0cS)\
 BACKEND_ROOT = pathlib.Path(__file__).resolve().parent.parent
 # UPLOAD_FOLDER = INSTA485_ROOT/'var'/'uploads'
 
-YOLO_URL = 'http://35.2.82.78:8000//api/v1/yolo/'
+YOLO_URL = 'http://localhost:8000/api/v1/yolo/'

@@ -1,6 +1,6 @@
 import requests
 
-url = 'http://35.2.82.78:8000//api/v1/yolo/'
+url = 'http://localhost:8000/api/v1/yolo/'
 my_img = {'image': open('test.jpg', 'rb')}
 r = requests.post(url, files=my_img)
 
